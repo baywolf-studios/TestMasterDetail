@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MasterDetailPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TestMasterDetail" x:Class="TestMasterDetail.MainPage"
+    Title="TEST">
+    <MasterDetailPage.Master>
+        <ContentPage Title="TEST">
+            <StackLayout>
+                <!-- Place new controls here -->
+                <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                    <Label Text="ViewA">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ViewACommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                <Label Text="ViewB">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ViewBCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>
